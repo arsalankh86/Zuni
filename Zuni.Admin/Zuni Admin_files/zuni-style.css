@@ -1,0 +1,359 @@
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../assets/font-roboto/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../assets/font-roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../assets/font-roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+body{
+	font-family: 'Roboto-Regular';
+}
+
+
+/* Zuni login & forget styles start*/
+
+.zuni-bg{
+    background-image:url(../imgs/bg.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login-panel::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.login-panel{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 600px;
+    background-color: #ffffff;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0px 0px 25px #b1b1b1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.brand-pan{
+    float: left;
+    background-color: #ec008c;
+    width: 40%;
+}
+
+.form-pan{
+    float: right;
+    width: 60%;
+    padding: 30px 25px;
+}
+
+.login-panel .brand-pan img{
+    display: block;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.login-panel .form-pan h1{
+    font-family: 'Roboto-Medium';
+    font-size: 19px;
+    margin: 0px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.login-panel .form-pan label{
+    display: block;
+    font-family: 'Roboto-Light';
+    font-size: 16px;
+    color: #ec008c;
+}
+
+.login-panel .form-pan input{
+    display: block;
+    padding: 6px;
+    border: #ec008c solid 1px;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.login-panel .form-pan button{
+    display: block;
+    background-color: #ec008c;
+    color: #ffffff;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    padding: 6px;
+    font-family: 'Roboto-Medium';
+    font-size: 18px;
+}
+
+.forget-pass{
+    text-align: right;
+    margin-bottom: 14px;
+}
+
+.forget-pass a, .back-to-login a{
+    color: #959595;
+    font-size: 14px;
+}
+
+.back-to-login{
+    text-align: right;
+    margin-top: 14px;
+}
+
+/* Zuni login & forget styles end*/
+
+
+/* Zuni admin styles start*/
+
+.zuni-contant{
+    position: relative;
+    margin-left: 250px;
+    transition: all 0.5s ease;
+}
+
+.zuni-nav{
+    position: absolute;
+    width: 250px;
+    background-color: #222d31;
+    top: 0px;
+    bottom: 0px;
+    overflow: auto;
+    transition: all 0.5s ease;
+}
+
+.contant-resize{
+    margin-left: 60px;
+}
+
+.nav-resize{
+    width: 60px;
+}
+
+.nav-resize ul.nav-list li span{
+    display: none;
+}
+
+.nav-resize .logo img{
+    display: none;
+}
+
+.contant-resize .fa-angle-right{
+    padding: 1px 0px 0px 5px;
+}
+
+.logo {
+    padding: 10px 0px;
+    height: 80px;
+    border-bottom: #324148 solid 1px;
+}
+
+.logo a{
+    display: block;
+    text-align: center;
+}
+
+.nav-toggle{
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    background-color: #1d2a30;
+    border: #324148 solid 2px;
+    color: #fff;
+    font-size: 28px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1px 1px 1px 0px;
+    cursor: pointer;
+}
+
+.nav-list{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-list li a{
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    border-bottom: #324148 solid 1px;
+    font-family: 'Roboto-Light';
+    font-size: 16px;
+}
+
+.nav-list li a:hover{
+    background-color: #324148;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.nav-list li a:active, .nav-list li a:focus{
+    text-decoration: none;
+}
+
+.active-nav{
+    border-left: #f0047f solid 6px;
+    transition: all 0.5s ease;
+}
+
+.active-nav a{
+    background-color: #324148;
+}
+
+
+.admin-top-bar{
+    height: 80px;
+    padding: 20px 30px;
+}
+
+.site-search{
+    margin-right: 300px;
+}
+
+.user-n-notification{
+    float: right;
+    width: 300px;
+}
+
+.user-n-notification > ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.user-n-notification > ul > li{
+    display: inline;
+    padding: 0px 4px;
+}
+
+.user-n-notification > ul li a{
+    color: #787878;
+    display: inline-block;
+}
+
+.user-n-notification ul li img{
+    display: inline-block;
+    border-radius: 50%;
+    border: #222d31 solid 2px;
+}
+
+.user-n-notification ul li .agent-name{
+    font-size: 18px;
+    padding: 0px 4px;
+}
+
+.noty, .envelope{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    padding: 3px 0px;
+    position: relative;
+    left: -6px;
+    top: -10px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.noty{
+    background-color: #ff0000;
+}
+
+.envelope{
+    background-color: #e9af00;
+}
+
+.user-n-notification .fa{
+    font-size: 18px;
+    color: #787878;
+}
+
+.user-n-notification .dropdown{
+    display: inline-block;
+}
+
+.site-search::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.logo-2{
+    display: none;
+    float: left;
+    width: 100px
+}
+
+.logo-2 img{
+    width: 78px;
+    height: auto;
+}
+
+
+.contant-resize .search-sec{
+    margin-left: 100px;
+}
+
+.contant-resize .logo-2{
+    display: inline-block;
+}
+
+.search-sec{
+    /*margin-left: 100px;*/
+    position: relative;
+}
+
+.search-sec input{
+    border: #ccc solid 1px;
+    width: 100%;
+    padding: 5px 75px 5px 40px;
+    font-size: 20px;
+    font-family: 'Roboto-Light';
+}
+
+.search-sec .fa{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-size: 18px;
+    color: #787878;
+    padding: 6px;
+    border-right: #ccc solid 1px;
+}
+
+.search-sec button{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    border: none;
+    padding: 6px 13px;
+    font-size: 14px;
+    font-family: 'Roboto-Light';
+    font-weight: bold;
+}
+
+/* Zuni admin styles end*/

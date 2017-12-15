@@ -1,0 +1,34 @@
+
+@media (max-width: 650px){
+
+    .zuni-bg{
+        background-image: none;
+    }
+
+    .login-panel{
+        width: 100%;
+        border-radius: 0px;
+        position: relative;
+        left: initial;
+        top: initial;
+        transform: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .brand-pan, .form-pan{
+        float: none;
+        width: 100%;
+    }
+
+    .login-panel .brand-pan img {
+        padding: 0px;
+    }
+
+    .login-panel .form-pan h1 {
+        font-size: 17px;
+        text-align: center;
+    }
+
+
+}

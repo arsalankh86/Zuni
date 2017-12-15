@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuni.Admin", "Zuni.Admin\Zuni.Admin.csproj", "{A671D8C3-8CE7-4A79-8517-8D166D2CBAAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuni.FrontEnd", "Zuni.FrontEnd\Zuni.FrontEnd.csproj", "{8FC83920-432F-49BD-9F25-3AC2F9AD685C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuni.Service", "Zuni.Service\Zuni.Service.csproj", "{9B0C34B6-78D3-4B70-B4FD-E98F9369980C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A671D8C3-8CE7-4A79-8517-8D166D2CBAAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A671D8C3-8CE7-4A79-8517-8D166D2CBAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A671D8C3-8CE7-4A79-8517-8D166D2CBAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A671D8C3-8CE7-4A79-8517-8D166D2CBAAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC83920-432F-49BD-9F25-3AC2F9AD685C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC83920-432F-49BD-9F25-3AC2F9AD685C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC83920-432F-49BD-9F25-3AC2F9AD685C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC83920-432F-49BD-9F25-3AC2F9AD685C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0C34B6-78D3-4B70-B4FD-E98F9369980C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0C34B6-78D3-4B70-B4FD-E98F9369980C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0C34B6-78D3-4B70-B4FD-E98F9369980C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0C34B6-78D3-4B70-B4FD-E98F9369980C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

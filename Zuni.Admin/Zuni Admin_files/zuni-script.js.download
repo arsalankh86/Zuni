@@ -1,0 +1,24 @@
+
+
+$(document).ready(function(){
+    /* $("#breakdown-btn").click(function(){
+         $(".check-box-pan").toggleClass(".col-md-2");
+         $(".breakdown-pan").show();
+     });*/
+     
+     /*	Main Nav Tab	*/
+     
+     $("ul.nav-list li").click(function(){
+         $('ul.nav-list li').removeClass('active-nav');
+         $(this).closest('li').addClass('active-nav');
+     });
+
+    /* Nave Toggle */
+
+     $(".nav-toggle").click(function(){
+        $(".zuni-contant").toggleClass("contant-resize");
+        $(".zuni-nav").toggleClass("nav-resize");
+        $(".nav-toggle").toggleClass("fa-angle-right");
+    });
+
+});	
