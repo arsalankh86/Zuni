@@ -175,12 +175,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Dashboard.aspx" />
+    <Content Include="Dashboard_.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <Content Include="Zuni Admin.html" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -229,6 +231,18 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Zuni Admin_files\bootstrap.min.css" />
+    <Content Include="Zuni Admin_files\font-awesome.min.css" />
+    <Content Include="Zuni Admin_files\logo-2.png" />
+    <Content Include="Zuni Admin_files\logo.png" />
+    <Content Include="Zuni Admin_files\user-avatar.jpg" />
+    <Content Include="Zuni Admin_files\zuni-responsive.css" />
+    <Content Include="Zuni Admin_files\zuni-round-logo.png" />
+    <Content Include="Zuni Admin_files\zuni-style.css" />
+    <Content Include="Zuni.Master" />
+    <Content Include="Zuni Admin_files\bootstrap.min.js.download" />
+    <Content Include="Zuni Admin_files\jquery-2.2.0.min.js.download" />
+    <Content Include="Zuni Admin_files\zuni-script.js.download" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
@@ -361,6 +375,13 @@
     <Compile Include="Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard_.aspx.cs">
+      <DependentUpon>Dashboard_.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_.aspx.designer.cs">
+      <DependentUpon>Dashboard_.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -402,12 +423,18 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Zuni.Master.cs">
+      <DependentUpon>Zuni.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zuni.Master.designer.cs">
+      <DependentUpon>Zuni.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\" />
     <Folder Include="imgs\" />
-    <Folder Include="Zuni Admin_files\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
