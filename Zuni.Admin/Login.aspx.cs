@@ -36,7 +36,7 @@ namespace Zuni.Admin
 
             if(dt.Rows.Count >= 1)
             {
-                Session["AdminUser"] = dt.Rows[0]["Username"].ToString();
+                Session["AdminUser"] = dt.Rows[0]["Name"].ToString();
                 Response.Redirect("Dashboard");
             }
         }
