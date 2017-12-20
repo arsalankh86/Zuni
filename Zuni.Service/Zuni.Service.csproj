@@ -41,9 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentRepository.cs" />
     <Compile Include="CategoryRepository.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="CustomerRepository.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="OrderRepository.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="ProductCategory.cs" />
     <Compile Include="ProductCategoryRepository.cs" />

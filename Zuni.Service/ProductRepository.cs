@@ -31,7 +31,8 @@ namespace Zuni.Service
 				,[Profitpriceinrupee]
                 ,[ProductGUID]
                 ,[Summary]
-                ,[InStock])
+                ,[InStock]
+                ,[IsActive])
 				Values
 				( 
 				@Name
@@ -47,6 +48,7 @@ namespace Zuni.Service
                 , @ProductGUID
                 , @Summary 
                 , @InStock
+                , @IsActive
                 );
 				Select scope_identity()";
                 SqlParameter[] parameterArray = new SqlParameter[]{
@@ -63,6 +65,7 @@ namespace Zuni.Service
                 , new SqlParameter("@ProductGUID",entity.ProductGuid)
                 , new SqlParameter("@Summary",entity.Summary)
                 , new SqlParameter("@InStock",entity.InStock)
+                , new SqlParameter("@IsActive",true)
                 };
                 var identity = SqlHelper.ExecuteScalar(this.ConnectionString, CommandType.Text, sql, parameterArray);
                 if (identity == DBNull.Value) throw new DataException("Identity column was null as a result of the insert operation.");
@@ -72,6 +75,23 @@ namespace Zuni.Service
             {
                 return 0;
             }
+        }
+
+        public DataSet GetAllProduct()
+        {
+            string sql = "select * from Product p, ProductCategory pc where pc.ProductID = p.ProductID and p.IsActive = 1";
+            DataSet ds = SqlHelper.ExecuteDataset(this.ConnectionString, CommandType.Text, sql, null);
+            if (ds == null || ds.Tables.Count == 0 || ds.Tables[0].Rows.Count == 0) return null;
+            return ds;
+        }
+
+        public DataSet GetAllProductByCategoryId(int categoryID)
+        {
+
+            string sql = "select p.* from Product p, ProductCategory pc where pc.ProductID = p.ProductID and p.IsActive = 1 and pc.CategoryID = " + categoryID;
+            DataSet ds = SqlHelper.ExecuteDataset(this.ConnectionString, CommandType.Text, sql, null);
+            if (ds == null || ds.Tables.Count == 0 || ds.Tables[0].Rows.Count == 0) return null;
+            return ds;
         }
     }
 }

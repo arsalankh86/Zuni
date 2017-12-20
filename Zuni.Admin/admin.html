@@ -1,12 +1,110 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Zuni.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="Zuni.Admin.Dashboard1" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-</asp:Content>
-<%--<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
-</asp:Content>--%>
-<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <title>Zuni Admin</title>
+    
+    <!-- Jquery JS -->
+    <script src="assets/jquery/jquery-2.2.0.min.js" type="text/javascript"></script>
+    
+    <!-- Bootstrape CSS and JS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Font Awesome CSS -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">   
+    
+    <!-- Zuni CSS -->
+    <link href="css/zuni-style.css" rel="stylesheet" type="text/css">
+    <link href="css/zuni-responsive.css" rel="stylesheet" type="text/css">
+    
+    <!-- Zuni JS -->
+	<script src="js/zuni-script.js"></script>
+	
+	<!-- Zuni Fav Icons -->
+	<link rel="icon" href="imgs/fav-icons/fav-icon-32x32.png" sizes="32x32">
+	<link rel="icon" href="imgs/fav-icons/fav-icon-192x192.png" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="imgs/fav-icons/fav-icon-180x180.png">
+	
+</head>
+
+<body class="bg-color">
 
 
-  <div class="contant-view">
+<!--	Zuni Admin Nav Panel Start	-->
+
+	<div class="zuni-nav">
+		<div class="nav-close hidden-sm hidden-md hidden-lg">
+			<i class="fa fa-times-circle"></i>
+		</div>
+		<div class="logo">
+			<a href="#">
+				<img src="imgs/logo.png">
+			</a>			
+		</div>
+		<ul class="nav-list">
+			<li class="active-nav"><a href="#" title="Dashboard"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+			<li><a href="#" title="Dashboard"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+			<li><a href="#" title="Dashboard"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+			<li><a href="#" title="Dashboard"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+			<li><a href="#" title="Dashboard"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+		</ul>
+	</div>
+			
+<!--	Zuni Admin Nav Panel End	-->
+
+
+<!--	Zuni Admin Contant Panel Start	-->
+
+	<div class="zuni-contant">		
+
+		<div class="admin-top-bar">
+
+			<i class="nav-toggle fa fa-angle-left"></i>
+
+			<div class="nav-menu hidden-sm hidden-md hidden-lg">
+					<i class="menu-btn fa fa-bars"></i>
+			</div>
+			
+			<div class="user-n-notification">
+				<ul>
+					<li class="hidden-xs"><a href="#"><i class="fa fa-bell"></i><span class="noty">1</span></a></li>
+					<li class="hidden-xs"><a href="#"><i class="fa fa-envelope "></i><span class="envelope">1</span></a></li>
+					<li class="hidden-xs"><img src="imgs/user-avatar.jpg"> <span class="agent-name">User Name</span></li>
+					<li>
+						<div class="dropdown">
+							<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown">
+								<i class="fa fa-ellipsis-v"></i>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-right">	
+								<li><a href="#">Setting</a></li>
+								<li><a href="#">Option 1</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</div>						
+					</li>
+				</ul>
+			</div>
+
+			<div class="site-search">
+				<div class="logo-2">
+					<a href="#">
+						<img src="imgs/logo-2.png">
+					</a>
+				</div>
+				<div class="search-sec">
+					<input type="search" placeholder="Search">
+					<i class="fa fa-search"></i>
+					<button>Search</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="contant-view">
 
 			<div class="title">
 				<h1>Hi User,</h1>
@@ -27,9 +125,7 @@
 							<div class="row">
 								<div class="col-sm-6 col-md-3">
 									<div class="data-box box-color-01">
-										<h3>
-                                            <asp:Label ID="lblCompletedOrderCount" runat="server" Text="Label"></asp:Label>
-										</h3>
+										<h3>5</h3>
 										<p>Orders</p>
 										<a href="#">More Info <i class="fa fa-arrow-circle-right"></i></a>
 										<br>
@@ -37,15 +133,15 @@
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="data-box box-color-02">
-										<h3> <asp:Label ID="lblPendingOrderCount" runat="server" Text="Label"></asp:Label></h3>
-										<p>Pending Order</p>
+										<h3>5</h3>
+										<p>Pending return requests</p>
 										<br>
 										<a href="#">More Info <i class="fa fa-arrow-circle-right"></i></a>
 									</div>
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="data-box box-color-03">
-										<h3> <asp:Label ID="lblRegisteredCustomerCount" runat="server" Text="Label"></asp:Label></h3>
+										<h3>5</h3>
 										<p>Registered customers</p>
 										<br>
 										<a href="#">More Info <i class="fa fa-arrow-circle-right"></i></a>
@@ -53,8 +149,8 @@
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="data-box box-color-04">
-										<h3> <asp:Label ID="lblAgentCount" runat="server" Text="Label"></asp:Label></h3>
-										<p>Agent</p>
+										<h3>5</h3>
+										<p>Low stock products</p>
 										<br>
 										<a href="#">More Info <i class="fa fa-arrow-circle-right"></i></a>
 									</div>
@@ -74,7 +170,7 @@
 				<div class="col-md-8">
 					<div class="admin-card">
 						<div class="head">
-							<h2>Customer</h2>
+							<h2>Heading</h2>
 							<i class="head-icon fa fa-user"></i>					
 							<button class="head-btn btn btn-link"><i class="fa fa-minus"></i></button>
 							
@@ -84,27 +180,28 @@
 							<table class="table table-bordered table-striped">
 								<thead>
 								<tr>
-									<th>Name</th>
-									<th>Phone</th>
+									<th>Firstname</th>
+									<th>Lastname</th>
 									<th>Email</th>
-                                    <th>Agent</th>
 								</tr>
 								</thead>
-                                <asp:Repeater ID="rptCustomer" runat="server">
-                                     <ItemTemplate>
 								<tbody>
 								<tr>
-									<td><%# Eval("FirstName") %>' <%# Eval("LastName") %>'</td>
-									<td><%# Eval("MobilePhone") %>'</td>
-									<td><%# Eval("Email") %>'</td>
-                                     <td><%# Eval("Agent") %>'</td>
+									<td>John</td>
+									<td>Doe</td>
+									<td>john@example.com</td>
+								</tr>
+								<tr>
+									<td>Mary</td>
+									<td>Moe</td>
+									<td>mary@example.com</td>
+								</tr>
+								<tr>
+									<td>July</td>
+									<td>Dooley</td>
+									<td>july@example.com</td>
 								</tr>
 								</tbody>
-                                         </ItemTemplate>
-                                    <AlternatingItemTemplate>
-                                        No Customer Found
-                                    </AlternatingItemTemplate>
-                                    </asp:Repeater>
 							</table>
 							</div>					
 						</div>
@@ -118,7 +215,7 @@
 				<div class="col-md-4">
 					<div class="admin-card">
 						<div class="head">
-							<h2>Agent</h2>
+							<h2>Heading</h2>
 							<i class="head-icon fa fa-user"></i>					
 							<button class="head-btn btn btn-link"><i class="fa fa-minus"></i></button>
 							
@@ -128,25 +225,28 @@
 							<table class="table table-bordered table-striped">
 								<thead>
 								<tr>
-									<th>Name</th>
-									<th>Username</th>
-									<th>Password</th>
+									<th>Firstname</th>
+									<th>Lastname</th>
+									<th>Email</th>
 								</tr>
 								</thead>
-								 <asp:Repeater ID="rptAgent" runat="server">
-                                     <ItemTemplate>
 								<tbody>
 								<tr>
-									<td><%# Eval("Name") %>' </td>
-									<td><%# Eval("Username") %>'</td>
-									<td><%# Eval("Password") %>'</td>
+									<td>John</td>
+									<td>Doe</td>
+									<td>john@example.com</td>
+								</tr>
+								<tr>
+									<td>Mary</td>
+									<td>Moe</td>
+									<td>mary@example.com</td>
+								</tr>
+								<tr>
+									<td>July</td>
+									<td>Dooley</td>
+									<td>july@example.com</td>
 								</tr>
 								</tbody>
-                                         </ItemTemplate>
-                                    <AlternatingItemTemplate>
-                                        No Agent Found
-                                    </AlternatingItemTemplate>
-                                    </asp:Repeater>
 							</table>
 							</div>					
 						</div>
@@ -163,7 +263,7 @@
 				<div class="col-md-12">
 					<div class="admin-card">
 						<div class="head">
-							<h2>Order</h2>
+							<h2>Heading</h2>
 							<i class="head-icon fa fa-user"></i>					
 							<button class="head-btn btn btn-link"><i class="fa fa-minus"></i></button>
 							
@@ -220,4 +320,11 @@
 				Verson:0.01
 			</div>
 		</div>
-</asp:Content>
+
+	</div>
+    
+<!--	Zuni Admin Contant Panel End	-->
+
+</body>
+
+</html>

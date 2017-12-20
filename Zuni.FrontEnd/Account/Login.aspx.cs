@@ -31,7 +31,7 @@ namespace Zuni.FrontEnd.Account
         {
 
             SqlConnection con = new SqlConnection(webcon);
-            SqlDataAdapter da = new SqlDataAdapter("usp_AdminLogin", con);
+            SqlDataAdapter da = new SqlDataAdapter("usp_AgentLogin", con);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.Parameters.Add("@uname", SqlDbType.NVarChar).Value = Email.Text; // email.Value.ToString();
             da.SelectCommand.Parameters.Add("@pass", SqlDbType.NVarChar).Value = Password.Text; // password.Value.ToString();
@@ -41,7 +41,7 @@ namespace Zuni.FrontEnd.Account
             if (dt.Rows.Count >= 1)
             {
                 Session["AdminUser"] = dt.Rows[0]["Name"].ToString();
-                Response.Redirect("Dashboard");
+                Response.Redirect("~/Default.aspx");
             }
 
 

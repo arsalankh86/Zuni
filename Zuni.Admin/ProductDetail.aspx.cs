@@ -75,7 +75,12 @@ namespace Zuni.Admin
                     product.ProductGuid = Guid.NewGuid();
 
                     //// FileUpload 
-                    string domain = ConfigurationManager.AppSettings["ImageDomain"];
+
+                    string domain = "http:\\" +  Request.Url.Host;
+
+                    if (domain == "localhost")
+                        domain +=":"+ Request.Url.Port; //ConfigurationManager.AppSettings["ImageDomain"];
+
                     string image = domain;
                     if (imageFile.HasFile)
                     {
@@ -88,7 +93,7 @@ namespace Zuni.Admin
                            {
                                 string trailingPath = Path.GetFileName(imageFile.PostedFile.FileName);
                                 string fullPath = Path.Combine(Server.MapPath("Images"), trailingPath);
-                                image += "\\Images\\" + trailingPath;
+                                image += "/Images/" + trailingPath;
                                 imageFile.PostedFile.SaveAs(fullPath);
                                 string filedes= "File name: " + imageFile.PostedFile.FileName + "<br>" +
                                     imageFile.PostedFile.ContentLength + " kb<br>" +

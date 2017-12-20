@@ -170,6 +170,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="admin.html" />
     <Content Include="Categories.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -182,6 +183,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="forget.html" />
+    <Content Include="login.html" />
     <Content Include="OrderDeatil.aspx" />
     <Content Include="ProductDetail.aspx" />
     <Content Include="Zuni Admin.html" />

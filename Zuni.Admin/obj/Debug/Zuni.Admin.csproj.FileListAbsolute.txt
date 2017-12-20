@@ -173,6 +173,8 @@ D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\Owin.dll
 D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\System.Web.Optimization.dll
 D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\System.Web.Providers.dll
 D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\WebGrease.dll
+D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\Zuni.Service.dll
+D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\Zuni.Service.pdb
 D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\System.Web.Optimization.xml
 D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\Antlr3.Runtime.pdb
@@ -196,5 +198,3 @@ D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\Microsoft.Owin.Security.OAu
 D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\obj\Debug\Zuni.Admin.csprojResolveAssemblyReference.cache
 D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\obj\Debug\Zuni.Admin.dll
 D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\obj\Debug\Zuni.Admin.pdb
-D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\Zuni.Service.dll
-D:\Zuni\Project\ZuniOnlineSystem\Zuni\Zuni.Admin\bin\Zuni.Service.pdb
