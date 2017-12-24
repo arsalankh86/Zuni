@@ -396,6 +396,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Zuni _ Login_files\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Zuni.Service\Zuni.Service.csproj">
