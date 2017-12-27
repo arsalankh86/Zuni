@@ -94,16 +94,14 @@
                                      <ItemTemplate>
 								<tbody>
 								<tr>
-									<td><%# Eval("FirstName") %>' <%# Eval("LastName") %>'</td>
-									<td><%# Eval("MobilePhone") %>'</td>
-									<td><%# Eval("Email") %>'</td>
-                                     <td><%# Eval("Agent") %>'</td>
+									<td><%# Eval("FirstName") %> <%# Eval("LastName") %></td>
+									<td><%# Eval("MobilePhone") %></td>
+									<td><%# Eval("Email") %></td>
+                                     <td><%# Eval("AgentID") %></td>
 								</tr>
 								</tbody>
                                          </ItemTemplate>
-                                    <AlternatingItemTemplate>
-                                        No Customer Found
-                                    </AlternatingItemTemplate>
+                                    
                                     </asp:Repeater>
 							</table>
 							</div>					
@@ -137,15 +135,13 @@
                                      <ItemTemplate>
 								<tbody>
 								<tr>
-									<td><%# Eval("Name") %>' </td>
-									<td><%# Eval("Username") %>'</td>
-									<td><%# Eval("Password") %>'</td>
+									<td><%# Eval("Name") %></td>
+									<td><%# Eval("Username") %></td>
+									<td><%# Eval("Password") %></td>
 								</tr>
 								</tbody>
                                          </ItemTemplate>
-                                    <AlternatingItemTemplate>
-                                        No Agent Found
-                                    </AlternatingItemTemplate>
+                                
                                     </asp:Repeater>
 							</table>
 							</div>					
@@ -173,28 +169,25 @@
 							<table class="table table-bordered table-striped">
 								<thead>
 								<tr>
-									<th>Firstname</th>
-									<th>Lastname</th>
-									<th>Email</th>
+									<th>Order Code</th>
+                                    <th>Customer</th>
+									<th>Amount </th>
+                                    <th>Status</th>
 								</tr>
 								</thead>
+								 <asp:Repeater ID="rptOrder" runat="server">
+                                     <ItemTemplate>
 								<tbody>
 								<tr>
-									<td>John</td>
-									<td>Doe</td>
-									<td>john@example.com</td>
-								</tr>
-								<tr>
-									<td>Mary</td>
-									<td>Moe</td>
-									<td>mary@example.com</td>
-								</tr>
-								<tr>
-									<td>July</td>
-									<td>Dooley</td>
-									<td>july@example.com</td>
+									<td><%# Eval("OrderNumber") %>' </td>
+									<td><%# Eval("CustomerFirstName") %>' <%# Eval("CustomerLastName") %>'</td>
+									<td><%# Eval("OrderStatus") %>'</td>
+                                    <td><%# Eval("OrderTotalAmount") %>'</td>
 								</tr>
 								</tbody>
+                                         </ItemTemplate>
+                                   
+                                    </asp:Repeater>
 							</table>
 							</div>					
 						</div>

@@ -1,0 +1,495 @@
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../assets/font-roboto/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../assets/font-roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../assets/font-roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+body{
+	font-family: 'Roboto-Regular';
+}
+
+a:focus, button:focus{
+    outline-color: transparent !important;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+/* Zuni login screen style start */
+
+.app-bg{
+    background-image:url(../imgs/app-bg.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login-screen .logo{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 20px auto 15px;
+}
+
+.login-form{
+    padding: 10px 35px;
+}
+
+.login-form .input-field:last-child{
+    margin-bottom: 0px;
+}
+
+.input-field{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-field input[type=text],
+.input-field input[type=email],
+.input-field input[type=password]{
+    width: 100%;
+    border: #ec008c solid 1px;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 23px;
+    box-shadow: #b5b5b5 1px 2px 4px;
+    color: #000;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus,
+.input-field button:focus{
+    outline-color: transparent;
+}
+
+.has-icon input[type=text],
+.has-icon input[type=email],
+.has-icon input[type=password]{
+    padding-left: 45px;
+}
+
+.has-icon .fa{
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 20px;
+    color: #ec008c;
+}
+
+.input-field button{
+    background-color: #ec008c;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 23px;
+    box-shadow: #b5b5b5 1px 2px 4px;
+    color: #fff;
+}
+
+/* Zuni login screen styles end*/
+
+
+/* Zuni Dashboard screen style start */
+
+.app-view{
+    position: relative;
+}
+
+.has-app-header .app-contant{
+    top: 59px;
+}
+
+.has-app-footer .app-contant{
+    bottom: 59px;
+}
+
+
+.app-header-bar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 4px;
+    border-bottom: #f0047f solid 1px;
+    height: 59px;
+    box-shadow: #7d7d7d 0px 2px 8px;
+    z-index: 1;
+}
+
+.app-header-bar img{
+    display: block;
+    width: auto;
+    height: 50px;
+    margin: auto
+}
+
+.app-header-bar button{
+    position: absolute;
+    top: 5px;
+    color: #ec008c;
+    font-size: 34px;
+    padding: 0px 10px;
+    z-index: 1px;
+}
+
+.app-header-bar button:focus,
+.app-header-bar button:hover{
+    color: #ec008c;
+}
+
+.app-header-bar button.left{
+    left: 6px;
+}
+
+.app-header-bar button.right{
+    right: 6px;
+}
+
+.app-contant{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.app-footer-bar{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 4px;
+    /*border-top: #f0047f solid 1px;*/
+    height: 59px;
+    box-shadow: #b7b7b7 0px -2px 8px;
+}
+
+.dash-boxs{
+    padding: 8px;
+    margin-bottom: 50px;
+}
+
+
+.dash-boxs::after{
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.dash-item{
+    position: relative;
+    float: left;
+    width: 50%;
+}
+
+.dash-item::after{
+    display: block;
+    content: '';
+    padding-top: 100%;
+}
+
+.square {
+    background: #ead4e3;
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    border-radius: 4px;
+    border: #d296be solid 1px;
+    color: #000;
+}
+
+a.square:hover, a.square:focus{
+    color: #000;
+}
+
+.dash-item .item-contant{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.dash-item .item-contant img{
+    width: 65px;
+    height: auto;
+}
+
+.dash-item .item-contant h5{
+    font-family: 'Roboto-Medium';
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.dashboard-screen .app-footer-bar{
+    background-image: url(../imgs/footer-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: none;
+}
+
+/* Zuni Dashboard screen style end */
+
+
+/* Zuni Side Menu style start*/
+
+.side-menu{
+    display: none;
+    position: fixed;
+    top: 59px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+}
+
+.sild-menu-backrop{
+    position: fixed;
+    left: 0;
+    right: 80px;;
+    top: 59px;
+    bottom: 0;
+    background-color: #312231;
+    box-shadow: #7d7d7d 0px 2px 8px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.profile-img img{
+    display: block;
+    width: 130px;
+    height: auto;
+    margin: auto;
+}
+
+.menu-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list .menu-item{
+ border-bottom: #483243  solid 1px;
+}
+.menu-list .menu-item:first-child{
+    border-top: #483243  solid 1px;
+}
+
+.menu-item a{
+    display: block;
+    color: #fff;
+    position: relative;
+}
+
+.menu-item h3{
+    font-family: 'Roboto-Light';
+    font-size: 18px;
+    padding: 15px 10px;
+    margin: 0px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.menu-item .fa{
+    position: absolute;
+    top: 12px;
+    font-size: 22px;
+}
+
+.menu-item span{
+    position: absolute;
+    top: 13px;
+    font-size: 16px;
+    display: inline-block;
+    background-color: #ec008c;
+    padding: 0px 10px;
+    border-radius: 14px;
+}
+
+.has-left-icon h3{
+    padding-left: 48px;
+}
+
+.has-right-icon h3{
+    padding-right: 48px;
+}
+
+.has-left-icon .left{
+    left: 16px;
+}
+
+.has-right-icon .right{
+    right: 16px;
+}
+
+.has-right-icon span{
+    right: 16px;
+}
+
+/* Zuni Side Menu style end */
+
+/* Zuni Products style start */
+
+.product-list{
+    padding: 8px;
+}
+
+.product-list::after{
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.product-item{
+    float: left;
+    width: 50%;
+    padding: 8px;
+}
+
+.product-item:nth-child(2n+1){
+    clear: both;
+}
+
+.product{
+    background-color: #fff;
+    border-radius: 4px;
+    border: #c6c6c6 solid 1px;
+    text-align: center;
+    padding: 8px;
+    box-shadow: #bdbdbd 1px 1px 3px;
+}
+
+.product-item img{
+    max-width: 85%;
+    height: auto;
+}
+
+.product-item h3{
+    font-family: 'Roboto-Medium';
+    font-size: 16px;
+    margin: 0px;
+    min-height: 34px;
+}
+
+.product-item h4{
+    font-size: 18px;
+    color: #f0047f;
+}
+
+.product-item button{
+    width: 100%;
+    
+    font-size: 18px;
+    background-color: #f0047f;
+    color: #fff;
+    border: none;
+    padding: 6px;
+    border-radius: 2px;
+}
+
+/* Zuni Products style end */
+
+/* Zuni Cart style start */
+
+.card-list{
+    padding: 16px;
+}
+
+.card-list .app-card{
+    margin-top: 16px;
+}
+
+.card-list .app-card:first-child{
+    margin-top: 0px;
+}
+
+.app-card{
+    background-color: #fff;
+    border: #c6c6c6 solid 1px;
+    border-radius: 4px;
+    box-shadow: #bdbdbd 1px 1px 3px;
+}
+
+.card-header{
+    background-color: #f5f5f5;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: #c6c6c6 solid 1px;
+    padding: 18px 12px 15px 12px;
+}
+
+.card-header .fa{
+    font-size: 18px;
+    color: #f0047f;
+    margin-right: 5px;
+}
+
+.card-header h1{
+    display: inline;
+    margin: 0;
+    font-family: 'Roboto-Medium';
+    font-size: 18px;
+    color: #f0047f;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+.card-footer::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+.card-footer{
+    background-color: #f5f5f5;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: #c6c6c6 solid 1px;
+    padding: 5px;
+}
+
+.card-footer button{
+    width: 100%;
+    background-color: #f0047f;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.card-footer .horizontal-stack{
+    padding: 5px;
+}
+
+.card-footer .vertical-stack{
+    padding: 8px;
+}
+
+.card-footer .vertical-stack:last-child{
+    padding-top: 4px;
+}
+
+
+/* Zuni Cart style end */

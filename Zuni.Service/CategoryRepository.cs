@@ -18,7 +18,7 @@ namespace Zuni.Service
         public DataSet BindAddcategory()
         {
             SqlConnection con = new SqlConnection(ConnectionString);
-            string qry = "select * from Category";
+            string qry = "select * from Category where ISActive =1";
             SqlDataAdapter adp = new SqlDataAdapter(qry, con);
             DataSet ds = new System.Data.DataSet();
             adp.Fill(ds);
@@ -62,7 +62,7 @@ namespace Zuni.Service
         public DataSet GetCategory()
         {
             SqlConnection con = new SqlConnection(ConnectionString);
-            string qry = "Select CategoryID,Name from Category";
+            string qry = "Select CategoryID,Name from Category where ISActive =1";
             SqlDataAdapter adp = new SqlDataAdapter(qry, con);
             DataSet ds = new System.Data.DataSet();
             adp.Fill(ds);

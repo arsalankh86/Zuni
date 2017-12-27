@@ -13,7 +13,7 @@ namespace Zuni.Admin
 {
     public partial class Login : System.Web.UI.Page
     {
-        AgentRepository agentRepo = new AgentRepository();
+        AdminRepository adminRepo = new AdminRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,7 +26,7 @@ namespace Zuni.Admin
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            DataTable dt = agentRepo.AuthAgent(email.Value.ToString(), password.Value.ToString());
+            DataTable dt = adminRepo.AuthAdmin(email.Value.ToString(), password.Value.ToString());
             if(dt.Rows.Count >= 1)
             {
                 Session["AdminUser"] = dt.Rows[0]["Name"].ToString();

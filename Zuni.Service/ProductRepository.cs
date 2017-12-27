@@ -13,7 +13,6 @@ namespace Zuni.Service
     public class ProductRepository
     {
         string ConnectionString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
-
         public int PreInsertProduct(Product entity)
         {
             try
@@ -93,5 +92,27 @@ namespace Zuni.Service
             if (ds == null || ds.Tables.Count == 0 || ds.Tables[0].Rows.Count == 0) return null;
             return ds;
         }
+
+
+        public DataSet GetProduct()
+        {
+            SqlConnection con = new SqlConnection(ConnectionString);
+            string qry = "select * from Product where IsActive = 1";
+            SqlDataAdapter adp = new SqlDataAdapter(qry, con);
+            DataSet ds = new System.Data.DataSet();
+            adp.Fill(ds);
+            return ds;
+        }
+
+        public DataSet GetProductByProductID(int ProductID)
+        {
+            SqlConnection con = new SqlConnection(ConnectionString);
+            string qry = "select * from Product where IsActive = 1 and ProductID = "+ProductID;
+            SqlDataAdapter adp = new SqlDataAdapter(qry, con);
+            DataSet ds = new System.Data.DataSet();
+            adp.Fill(ds);
+            return ds;
+        }
+
     }
 }

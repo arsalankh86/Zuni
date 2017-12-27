@@ -18,6 +18,8 @@ namespace Zuni.Admin
         string webcon = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
         CategoryRepository catRep = new CategoryRepository();
+        ProductRepository productrep = new ProductRepository();
+        ProductCategoryRepository productcatrep = new ProductCategoryRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
            
@@ -32,11 +34,8 @@ namespace Zuni.Admin
 
         private void BindGridviw()
         {
-            SqlConnection con = new SqlConnection(webcon);
-            string qry = "select * from Product";
-            SqlDataAdapter adp = new SqlDataAdapter(qry, con);
             DataSet ds = new System.Data.DataSet();
-            adp.Fill(ds);
+            ds = productrep.GetProduct();
             GridView1.DataSource = ds.Tables[0];
             GridView1.DataBind();
         }
@@ -55,8 +54,7 @@ namespace Zuni.Admin
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            ProductRepository productrep = new ProductRepository();
-            ProductCategoryRepository productcatrep = new ProductCategoryRepository();
+       
 
             string name = txtname.Text;
             if (txtname.Text != string.Empty)
