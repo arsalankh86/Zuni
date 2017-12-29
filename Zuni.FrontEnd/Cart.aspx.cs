@@ -95,8 +95,11 @@ namespace Zuni.FrontEnd
         protected void btnConfirmOrder_Click(object sender, EventArgs e)
         {
             int agentId = 0;
-            if (Session["AgentUser"] != null)
-                agentId = Convert.ToInt32(Session["AgentUser"].ToString());
+            if(Session["AgentUser"] != null)
+            {
+                DataRow dr = (DataRow)Session["AgentUser"];
+                agentId = Convert.ToInt32(dr[0].ToString());
+            }
 
             Customer customer = new Customer();
             customer.FirstName = name.Value;
@@ -118,6 +121,7 @@ namespace Zuni.FrontEnd
             order.FirstName = name.Value;
             order.LastName = "";
             order.CustomerId = customer.CustomerId;
+            order.AgentId = agentId;
 
             OrderRepository orderRepository = new OrderRepository();
             int OrderNumber = orderRepository.InsertOrders(order);
@@ -135,6 +139,7 @@ namespace Zuni.FrontEnd
                 orderDetail.OrderedProductPrice = Convert.ToDecimal(dr[1].ToString());
                 orderDetail.Quantity = Convert.ToInt32(dr[2].ToString());
                 orderDetail.OrderedProductName = dr[5].ToString();
+                orderDetail.AgentId = agentId;
                 orderRep.InsertOrdersDetail(orderDetail);
 
             }
@@ -145,7 +150,10 @@ namespace Zuni.FrontEnd
         {
             int agentId = 0;
             if (Session["AgentUser"] != null)
-                agentId = Convert.ToInt32(Session["AgentUser"].ToString());
+            {
+                DataRow dr = (DataRow)Session["AgentUser"];
+                agentId = Convert.ToInt32(dr[0].ToString());
+            }
 
             Customer customer = new Customer();
             customer.FirstName = name.Value;

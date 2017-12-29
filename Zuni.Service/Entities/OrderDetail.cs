@@ -112,5 +112,7 @@ namespace Zuni.Service.Entities
 
         public System.Decimal TaxRate { get; set; }
 
+        public System.Int32 AgentId { get; set; }
+
     }
 }

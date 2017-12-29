@@ -15,6 +15,7 @@ namespace Zuni.FrontEnd
         CategoryRepository catrep = new CategoryRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Redirect("Login.aspx");
             if (IsPostBack)
                 return;
 

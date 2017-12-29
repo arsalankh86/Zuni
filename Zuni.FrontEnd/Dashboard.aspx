@@ -28,7 +28,7 @@
 					</a>
 				</div>
 				<div class="dash-item">
-					<a href="Order.aspx" class="square">
+					<a href="OrdersDetail.aspx" class="square">
 						<div class="item-contant">
 							<img src="./Zuni _ Dashboard_files/order-details-icon.png">
 							<h5>Order Details</h5>
@@ -36,7 +36,7 @@
 					</a>
 				</div>
 				<div class="dash-item">
-					<a href="Customer.aspx" class="square">
+					<a href="CustomerDetail.aspx" class="square">
 						<div class="item-contant">
 							<img src="./Zuni _ Dashboard_files/customer-details-icon.png">
 							<h5>Customer Details</h5>
