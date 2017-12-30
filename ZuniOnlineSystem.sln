@@ -9,6 +9,48 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuni.FrontEnd", "Zuni.Front
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuni.Service", "Zuni.Service\Zuni.Service.csproj", "{9B0C34B6-78D3-4B70-B4FD-E98F9369980C}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Zuni.FrontendWebsite", "Zuni.FrontendWebsite\", "{4EB9D14B-2056-4F64-84CE-E23D9404DE41}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61936"
+		Debug.AspNetCompiler.PhysicalPath = "Zuni.FrontendWebsite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61936\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61936"
+		Release.AspNetCompiler.PhysicalPath = "Zuni.FrontendWebsite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61936\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61936"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Zuni.BackendWebsite", "Zuni.BackendWebsite\", "{A1108E8B-11FD-4040-AE63-ACA3BC89A0E7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61952"
+		Debug.AspNetCompiler.PhysicalPath = "Zuni.BackendWebsite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61952\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61952"
+		Release.AspNetCompiler.PhysicalPath = "Zuni.BackendWebsite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61952\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61952"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +69,14 @@ Global
 		{9B0C34B6-78D3-4B70-B4FD-E98F9369980C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B0C34B6-78D3-4B70-B4FD-E98F9369980C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B0C34B6-78D3-4B70-B4FD-E98F9369980C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB9D14B-2056-4F64-84CE-E23D9404DE41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB9D14B-2056-4F64-84CE-E23D9404DE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB9D14B-2056-4F64-84CE-E23D9404DE41}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB9D14B-2056-4F64-84CE-E23D9404DE41}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A1108E8B-11FD-4040-AE63-ACA3BC89A0E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1108E8B-11FD-4040-AE63-ACA3BC89A0E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1108E8B-11FD-4040-AE63-ACA3BC89A0E7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1108E8B-11FD-4040-AE63-ACA3BC89A0E7}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
