@@ -12,6 +12,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Zuni.FrontendWebsite", "Zuni.FrontendWebsite\", "{4EB9D14B-2056-4F64-84CE-E23D9404DE41}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{9b0c34b6-78d3-4b70-b4fd-e98f9369980c}|Zuni.Service.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_61936"
 		Debug.AspNetCompiler.PhysicalPath = "Zuni.FrontendWebsite\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61936\"
@@ -27,6 +28,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Zuni.FrontendWebsite", "Zun
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "61936"
+		SlnRelativePath = "Zuni.FrontendWebsite\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -48,6 +50,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Zuni.BackendWebsite", "Zuni
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "61952"
+		SlnRelativePath = "Zuni.BackendWebsite\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
