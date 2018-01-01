@@ -35,6 +35,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Zuni.BackendWebsite", "Zuni.BackendWebsite\", "{A1108E8B-11FD-4040-AE63-ACA3BC89A0E7}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{9b0c34b6-78d3-4b70-b4fd-e98f9369980c}|Zuni.Service.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_61952"
 		Debug.AspNetCompiler.PhysicalPath = "Zuni.BackendWebsite\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61952\"

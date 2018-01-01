@@ -9,7 +9,7 @@
                      <ItemTemplate>
                           <div class="product-item">
 					<div class="product">
-						<img src="<%# Eval("ImageFilenameOverride") %>">
+						<img src="http:\\<%# Eval("ImageFilenameOverride") %>" style="width:80px; height:80px;">
 						<h3><%# Eval("Name") %></h3>
 						<h4>PKR: <%# Eval("Profitpriceinrupee") %></h4>
 						 <asp:Button ID="Button1" runat="server" CommandArgument='<%# Eval("ProductID") %>'

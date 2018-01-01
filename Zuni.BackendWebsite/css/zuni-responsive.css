@@ -1,0 +1,123 @@
+
+@media (max-width: 650px){
+
+    .zuni-bg{
+        background-image: none;
+    }
+
+    .login-panel{
+        width: 100%;
+        border-radius: 0px;
+        position: relative;
+        left: initial;
+        top: initial;
+        transform: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .brand-pan, .form-pan{
+        float: none;
+        width: 100%;
+    }
+
+    .login-panel .brand-pan img {
+        padding: 0px;
+    }
+
+    .login-panel .form-pan h1 {
+        font-size: 17px;
+        text-align: center;
+    }
+
+
+}
+
+
+@media (max-width: 767px){
+
+    .user-n-notification{
+        width: 36px;
+    }
+
+    .site-search {
+        margin-right: 36px;
+        margin-left: 36px;
+    }
+
+    .zuni-contant {
+        margin-left: 0px;
+    }
+    .zuni-nav{
+        display: none;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+
+    .admin-top-bar{
+        padding: 15px;
+        height: auto;
+    }
+
+    .menu-btn{
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .nav-menu{
+        float: left;
+        padding: 5px;
+    }
+
+    .logo-2{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-2 img {
+        width: 65px;
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
+
+    .search-sec {
+        clear: both;
+        margin: 0px -40px !important;
+    }
+
+    .nav-close{
+        position: absolute;
+        right: 18px;
+        top: 20px;
+        color: #fff;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .nav-resize ul.nav-list li span {
+        display: inline-block !important;
+    }
+
+    .nav-fixed{
+        left: 0px !important;
+    }
+    
+}
+
+@media (max-width: 991px){
+
+    .footer{
+        padding: 2px 0px;
+    }
+
+    .footer > div {
+        text-align: center;
+        padding: 2px 0px;
+    }
+
+}

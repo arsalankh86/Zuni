@@ -90,7 +90,7 @@
 						</a>
 					</li>
 					<li class="menu-item has-left-icon">
-						<a href="OrdersDetail.aspx">
+						<a href="OrderDetail.aspx">
 							<h3>Orders</h3>
 							<i class="left fa fa-info-circle"></i>
 						</a>

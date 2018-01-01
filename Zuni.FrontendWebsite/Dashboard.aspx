@@ -29,7 +29,7 @@
 					</a>
 				</div>
 				<div class="dash-item">
-					<a href="OrdersDetail.aspx" class="square">
+					<a href="OrderDetail.aspx" class="square">
 						<div class="item-contant">
 							<img src="imgs/order-details-icon.png">
 							<h5>Order Details</h5>

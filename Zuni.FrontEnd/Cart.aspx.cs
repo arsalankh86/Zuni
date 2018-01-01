@@ -122,6 +122,7 @@ namespace Zuni.FrontEnd
             order.LastName = "";
             order.CustomerId = customer.CustomerId;
             order.AgentId = agentId;
+            order.OrderDate = DateTime.Now;
 
             OrderRepository orderRepository = new OrderRepository();
             int OrderNumber = orderRepository.InsertOrders(order);
@@ -140,6 +141,7 @@ namespace Zuni.FrontEnd
                 orderDetail.Quantity = Convert.ToInt32(dr[2].ToString());
                 orderDetail.OrderedProductName = dr[5].ToString();
                 orderDetail.AgentId = agentId;
+                orderDetail.CreatedOn = DateTime.Now;
                 orderRep.InsertOrdersDetail(orderDetail);
 
             }

@@ -114,32 +114,38 @@ public partial class Cart : System.Web.UI.Page
         order.Email = email.Value;
         order.OrderDate = DateTime.Now;
         order.OrderGuid = new Guid();
-        order.OrderStatus = "Confirm & PendingPending";
+        order.OrderStatus = "Confirm & Pending";
         order.RegisterDate = DateTime.Now;
         order.OrderStatusCode = 1;
         order.FirstName = name.Value;
         order.LastName = "";
         order.CustomerId = customer.CustomerId;
         order.AgentId = agentId;
-
-        OrderRepository orderRepository = new OrderRepository();
-        int OrderNumber = orderRepository.InsertOrders(order);
-
+        decimal amount = 0;
         DataTable dtSessionCart = (DataTable)Session["Cart"];
+        for (int i = dtSessionCart.Rows.Count - 1; i >= 0; i--)
+        {
+            DataRow dr = dtSessionCart.Rows[i];
+            amount += Convert.ToDecimal(dr[1].ToString());
+        }
+
+          order.OrderTotal = amount;
+            int OrderNumber = orderRep.InsertOrders(order);
+
         for (int i = dtSessionCart.Rows.Count - 1; i >= 0; i--)
         {
             DataRow dr = dtSessionCart.Rows[i];
 
             OrderDetail orderDetail = new OrderDetail();
-            orderDetail.CustomerId = customer.CustomerId;
-            orderDetail.OrderNumber = OrderNumber;
-
-            orderDetail.ProductId = Convert.ToInt32(dr[0].ToString());
-            orderDetail.OrderedProductPrice = Convert.ToDecimal(dr[1].ToString());
-            orderDetail.Quantity = Convert.ToInt32(dr[2].ToString());
-            orderDetail.OrderedProductName = dr[5].ToString();
-            orderDetail.AgentId = agentId;
-            orderRep.InsertOrdersDetail(orderDetail);
+            //orderDetail.CustomerId = customer.CustomerId;
+            //orderDetail.OrderNumber = OrderNumber;
+            //orderDetail.ProductId = Convert.ToInt32(dr[0].ToString());
+            //orderDetail.OrderedProductPrice = Convert.ToDecimal(dr[1].ToString());
+            //orderDetail.Quantity = Convert.ToInt32(dr[2].ToString());
+            //orderDetail.OrderedProductName = dr[5].ToString();
+            //orderDetail.AgentId = agentId;
+            //orderRep.InsertOrdersDetail(orderDetail);
+            orderRep.InsertOrdersDetail(OrderNumber, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[5].ToString(), agentId, customer.CustomerId);
 
         }
         Response.Redirect("Thankyou.aspx");
@@ -181,17 +187,19 @@ public partial class Cart : System.Web.UI.Page
         DataTable dtSessionCart = (DataTable)Session["Cart"];
         for (int i = dtSessionCart.Rows.Count - 1; i >= 0; i--)
         {
+
             DataRow dr = dtSessionCart.Rows[i];
 
             OrderDetail orderDetail = new OrderDetail();
-            orderDetail.CustomerId = customer.CustomerId;
-            orderDetail.OrderNumber = OrderNumber;
-
-            orderDetail.ProductId = Convert.ToInt32(dr[0].ToString());
-            orderDetail.OrderedProductPrice = Convert.ToDecimal(dr[1].ToString());
-            orderDetail.Quantity = Convert.ToInt32(dr[2].ToString());
-            orderDetail.OrderedProductName = dr[5].ToString();
-            orderRep.InsertOrdersDetail(orderDetail);
+            //orderDetail.CustomerId = customer.CustomerId;
+            //orderDetail.OrderNumber = OrderNumber;
+            //orderDetail.ProductId = Convert.ToInt32(dr[0].ToString());
+            //orderDetail.OrderedProductPrice = Convert.ToDecimal(dr[1].ToString());
+            //orderDetail.Quantity = Convert.ToInt32(dr[2].ToString());
+            //orderDetail.OrderedProductName = dr[5].ToString();
+            //orderDetail.AgentId = agentId;
+            //orderRep.InsertOrdersDetail(orderDetail);
+            orderRep.InsertOrdersDetail(OrderNumber, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[5].ToString(), agentId, customer.CustomerId);
 
         }
         Response.Redirect("Thankyou.aspx");

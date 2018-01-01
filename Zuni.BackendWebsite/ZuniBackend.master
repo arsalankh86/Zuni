@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ZuniBackend.master.cs" Inherits="ZuniBackend" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <title>Zuni Admin</title>
+    
+    <!-- Jquery JS -->
+    <script src="assets/jquery/jquery-2.2.0.min.js" type="text/javascript"></script>
+    
+    <!-- Bootstrape CSS and JS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Font Awesome CSS -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">   
+    
+    <!-- Zuni CSS -->
+    <link href="css/zuni-style.css" rel="stylesheet" type="text/css">
+    <link href="css/zuni-responsive.css" rel="stylesheet" type="text/css">
+    
+    <!-- Zuni JS -->
+	<script src="js/zuni-script.js"></script>
+	
+	<!-- Zuni Fav Icons -->
+	<link rel="icon" href="imgs/fav-icons/fav-icon-32x32.png" sizes="32x32">
+	<link rel="icon" href="imgs/fav-icons/fav-icon-192x192.png" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="imgs/fav-icons/fav-icon-180x180.png">
+	
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="bg-color">
+  
+<!--	Zuni Admin Nav Panel Start	-->
+
+	<div class="zuni-nav">
+		<div class="nav-close hidden-sm hidden-md hidden-lg">
+			<i class="fa fa-times-circle"></i>
+		</div>
+		<div class="logo">
+			<a href="#">
+				<img src="imgs/logo.png">
+			</a>			
+		</div>
+		<ul class="nav-list">
+			<li class="active-nav"><a href="Dashboard.aspx" title="Dashboard"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+			<li><a href="ProductDetail.aspx" title="Customer Detail"><i class="fa fa-tachometer"></i> <span>Product Detail</span></a></li>
+            <li><a href="Categories.aspx" title="Categories"><i class="fa fa-tachometer"></i> <span>Categories</span></a></li>
+            <li><a href="CustomerDetail.aspx" title="Product Detail"><i class="fa fa-tachometer"></i> <span>Customer Detail</span></a></li>
+            <li><a href="OrderDeatil.aspx"  title="Order Detail"><i class="fa fa-tachometer"></i> <span>Order Detail</span></a></li>
+			<li><a href="AgentDetail.aspx" title="Agent Detail"><i class="fa fa-tachometer"></i> <span>Agent Detail</span></a></li>
+            <li><a href="Report.aspx" title="Reports"><i class="fa fa-tachometer"></i> <span>Reports</span></a></li>
+		</ul>
+	</div>
+			
+<!--	Zuni Admin Nav Panel End	-->
+
+        
+<!--	Zuni Admin Contant Panel Start	-->
+     <form id="form1" runat="server">
+	<div class="zuni-contant">
+		<i class="nav-toggle fa fa-angle-left"></i>
+
+		<div class="admin-top-bar">
+
+			<i class="nav-toggle fa fa-angle-left"></i>
+
+			<div class="nav-menu hidden-sm hidden-md hidden-lg">
+					<i class="menu-btn fa fa-bars"></i>
+			</div>
+			
+			<div class="user-n-notification">
+				<ul>
+					<li class="hidden-xs"><a href="#"><i class="fa fa-bell"></i><span class="noty">1</span></a></li>
+					<li class="hidden-xs"><a href="#"><i class="fa fa-envelope "></i><span class="envelope">1</span></a></li>
+					<li class="hidden-xs"><img src="imgs/user-avatar.jpg"> <span class="agent-name"><asp:Label runat="server" ID="lbladmin" Text="Admin"></asp:Label></span></li>
+					<li>
+						<div class="dropdown">
+							<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown">
+								<i class="fa fa-ellipsis-v"></i>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-right">	
+								<li><a href="#">Setting</a></li>
+								<li><a href="#">Option 1</a></li>
+								<li class="divider"></li>
+								<li><asp:LinkButton ID="lnklogout" OnClick="lnklogout_Click"  runat="server">Logout</asp:LinkButton></li>
+							</ul>
+						</div>						
+					</li>
+				</ul>
+			</div>
+
+			<div class="site-search">
+				<div class="logo-2">
+					<a href="#">
+						<img src="imgs/logo-2.png">
+					</a>
+				</div>
+				<div class="search-sec">
+					<input type="search" placeholder="Search">
+					<i class="fa fa-search"></i>
+					<button>Search</button>
+				</div>
+			</div>
+
+		</div>
+        <br />
+         <div style="padding-left:10px;">
+                
+      
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                     
+    </div>
+	</div>
+    
+<!--	Zuni Admin Contant Panel End	-->
+
+       </form>
+
+   
+  
+</body>
+</html>

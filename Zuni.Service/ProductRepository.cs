@@ -104,6 +104,15 @@ namespace Zuni.Service
             return ds;
         }
 
+        public DataSet GetProductWithCategory()
+        {
+            SqlConnection con = new SqlConnection(ConnectionString);
+            string qry = "select p.*,c.Name as CatName from Product p, ProductCategory pc, Category c where pc.ProductID = p.ProductID and pc.CategoryID = c.CategoryID and p.IsActive = 1 and c.IsActive =1";
+            SqlDataAdapter adp = new SqlDataAdapter(qry, con);
+            DataSet ds = new System.Data.DataSet();
+            adp.Fill(ds);
+            return ds;
+        }
         public DataSet GetProductByProductID(int ProductID)
         {
             SqlConnection con = new SqlConnection(ConnectionString);

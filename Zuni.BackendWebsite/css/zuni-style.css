@@ -1,0 +1,560 @@
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../assets/font-roboto/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../assets/font-roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../assets/font-roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+body{
+	font-family: 'Roboto-Regular';
+}
+
+
+/* Zuni login & forget styles start*/
+
+.zuni-bg{
+    background-image:url(../imgs/bg.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login-panel::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.login-panel{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 600px;
+    background-color: #ffffff;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0px 0px 25px #b1b1b1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.brand-pan{
+    float: left;
+    background-color: #ec008c;
+    width: 40%;
+}
+
+.form-pan{
+    float: right;
+    width: 60%;
+    padding: 30px 25px;
+}
+
+.login-panel .brand-pan img{
+    display: block;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.login-panel .form-pan h1{
+    font-family: 'Roboto-Medium';
+    font-size: 19px;
+    margin: 0px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.login-panel .form-pan label{
+    display: block;
+    font-family: 'Roboto-Light';
+    font-size: 16px;
+    color: #ec008c;
+}
+
+.login-panel .form-pan input{
+    display: block;
+    padding: 6px;
+    border: #ec008c solid 1px;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.login-panel .form-pan button{
+    display: block;
+    background-color: #ec008c;
+    color: #ffffff;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    padding: 6px;
+    font-family: 'Roboto-Medium';
+    font-size: 18px;
+}
+
+.forget-pass{
+    text-align: right;
+    margin-bottom: 14px;
+}
+
+.forget-pass a, .back-to-login a{
+    color: #959595;
+    font-size: 14px;
+}
+
+.back-to-login{
+    text-align: right;
+    margin-top: 14px;
+}
+
+/* Zuni login & forget styles end*/
+
+
+/* Zuni admin styles start*/
+
+.bg-color{
+    background-color: #f3f3f3;
+}
+
+.zuni-contant{
+    position: relative;
+    margin-left: 250px;
+    transition: all 0.5s ease;    
+}
+
+.zuni-nav{
+    position: fixed;
+    width: 250px;
+    background-color: #222d31;
+    top: 0px;
+    bottom: 0px;
+    overflow: auto;
+    transition: all 0.5s ease;
+}
+
+.contant-resize{
+    margin-left: 60px;
+}
+
+.nav-resize{
+    width: 60px;
+}
+
+.nav-resize ul.nav-list li span{
+    display: none;
+}
+
+.nav-resize .logo img{
+    display: none;
+}
+
+.contant-resize .fa-angle-right{
+    padding: 1px 0px 0px 5px;
+}
+
+.logo {
+    padding: 10px 0px;
+    height: 80px;
+    border-bottom: #324148 solid 1px;
+}
+
+.logo a{
+    display: block;
+    text-align: center;
+}
+
+.nav-toggle{
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    background-color: #1d2a30;
+    border: #324148 solid 2px;
+    color: #fff;
+    font-size: 28px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1px 1px 1px 0px;
+    cursor: pointer;
+}
+
+.nav-list{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-list li a{
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    border-bottom: #324148 solid 1px;
+    font-family: 'Roboto-Light';
+    font-size: 16px;
+}
+
+.nav-list li a:hover{
+    background-color: #324148;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.nav-list li a:active, .nav-list li a:focus{
+    text-decoration: none;
+}
+
+.active-nav{
+    border-left: #f0047f solid 6px;
+    transition: all 0.5s ease;
+}
+
+.active-nav a{
+    background-color: #324148;
+}
+
+
+.admin-top-bar{
+    height: 80px;
+    padding: 20px 30px;
+    background-color: #ffffff;
+}
+
+.admin-top-bar::after{
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.site-search{
+    margin-right: 300px;
+}
+
+.user-n-notification{
+    float: right;
+    width: 300px;
+}
+
+.user-n-notification > ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.user-n-notification > ul > li{
+    display: inline;
+    padding: 0px 4px;
+}
+
+.user-n-notification > ul li a{
+    color: #787878;
+    display: inline-block;
+}
+
+.user-n-notification ul li img{
+    display: inline-block;
+    border-radius: 50%;
+    border: #222d31 solid 2px;
+}
+
+.user-n-notification ul li .agent-name{
+    font-size: 18px;
+    padding: 0px 4px;
+}
+
+.noty, .envelope{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    padding: 3px 0px;
+    position: relative;
+    left: -6px;
+    top: -10px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.noty{
+    background-color: #ff0000;
+}
+
+.envelope{
+    background-color: #e9af00;
+}
+
+.user-n-notification .fa{
+    font-size: 18px;
+    color: #787878;
+}
+
+.user-n-notification .dropdown{
+    display: inline-block;
+}
+
+.site-search::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.logo-2{
+    display: none;
+    float: left;
+    width: 100px
+}
+
+.logo-2 img{
+    width: 78px;
+    height: auto;
+}
+
+
+.contant-resize .search-sec{
+    margin-left: 100px;
+}
+
+.contant-resize .logo-2{
+    display: inline-block;
+}
+
+.search-sec{
+    /*margin-left: 100px;*/
+    position: relative;
+}
+
+.search-sec input{
+    border: #ccc solid 1px;
+    width: 100%;
+    padding: 5px 75px 5px 40px;
+    font-size: 20px;
+    font-family: 'Roboto-Light';
+}
+
+.search-sec .fa{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-size: 18px;
+    color: #787878;
+    padding: 6px;
+    border-right: #ccc solid 1px;
+}
+
+.search-sec button{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    border: none;
+    padding: 6px 13px;
+    font-size: 14px;
+    font-family: 'Roboto-Light';
+    font-weight: bold;
+}
+
+.contant-view{
+    padding: 20px;
+}
+
+.title h1{
+    font-size: 20px;
+    font-family: 'Roboto-Medium';
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.title p{
+    font-size: 16px;
+}
+
+.title hr{
+    border-top: 1px solid #ccc;
+}
+
+
+.admin-card{
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: #e0e0e0 1px 1px 6px;
+    border: #e4e8ed solid 1px;
+    border-top: #f0047f solid 3px;
+}
+
+.admin-card .head::after{
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.admin-card .head{
+    position: relative;
+    border-bottom: #ccc solid 1px;
+}
+
+.admin-card .head h2{
+    font-family: 'Roboto-Medium';
+    font-size: 18px;
+    margin: 15px 35px;
+}
+
+.admin-card .head .head-icon{
+    position: absolute;
+    left: 12px;
+    top: -1px;
+    font-size: 20px;
+}
+
+.admin-card .head .head-btn{
+    position: absolute;
+    right: 0px;
+    top: -7px;
+    font-size: 18px;
+    color: #333;
+}
+
+.admin-card .body{
+    position: relative;
+    padding: 15px;
+}
+
+.admin-card .body .table{
+    margin-bottom: 0px;
+}
+.admin-card .body thead{
+    background-color: #f3f3f3;
+}
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color: #f9f9f9; // Choose your own color here
+ }
+
+ .table-striped>tbody>tr:nth-child(odd)>td, 
+ .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #ffffff; // Choose your own color here
+}
+
+.admin-card .foot{
+    padding: 15px;
+    border-top: #ccc solid 1px;
+    text-align: right;
+}
+
+.contant-view > .row > div{
+    margin-bottom: 25px;
+}
+
+.nav-fixed{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    border-bottom: #ccc solid 1px;
+    box-shadow: #c1c1c1 0px 2px 8px;
+}
+
+
+
+.zuni-contant .nav-fixed{
+    left: 250px;
+    transition: all 0.5s ease;  
+}
+.contant-resize .nav-fixed{
+    left: 60px;
+    transition: all 0.5s ease;  
+}
+
+.footer{
+    font-family: 'Roboto-Medium';
+    margin: 0px;
+    background-color: #e2e2e2;
+    padding: 20px 0px;
+    border-top: #ccc solid 1px;
+}
+
+
+.data-box{
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 10px 10px 0px 10px;
+    position: relative;    
+    color: #fff;
+}
+
+.data-box h3{
+    font-family: 'Roboto-Medium';
+    font-size: 30px;
+    margin: 0px;
+}
+
+.data-box p{
+    font-size: 14px;
+    margin: 10px 0px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.data-box a{
+    font-size: 12px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 2px;
+    color: #fff;
+    padding: 2px 0px;
+}
+
+.box-color-01{
+    background-color: #00c0ef;
+    background-image: url(../imgs/order.png);
+    background-repeat: no-repeat;
+    background-position: right 8px top 8px;
+    background-size: 70px;
+}
+
+.box-color-02{
+    background-color: #f39c12;
+    background-image: url(../imgs/pending.png);
+    background-repeat: no-repeat;
+    background-position: right 8px top 8px;
+    background-size: 70px;
+}
+
+.box-color-03{
+    background-color: #00a65a;
+    background-image: url(../imgs/registered.png);
+    background-repeat: no-repeat;
+    background-position: right 8px top 8px;
+    background-size: 70px;
+}
+
+.box-color-04{
+    background-color: #dd4b39;
+    background-image: url(../imgs/stock.png);
+    background-repeat: no-repeat;
+    background-position: right 8px top 8px;
+    background-size: 70px;
+}
+
+/* Zuni admin styles end*/
