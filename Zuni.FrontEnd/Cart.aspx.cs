@@ -115,9 +115,9 @@ namespace Zuni.FrontEnd
             order.Email = email.Value;
             order.OrderDate = DateTime.Now;
             order.OrderGuid = new Guid();
-            order.OrderStatus = "Confirm & PendingPending";
+            order.OrderStatus = "Confirm & Pending for Delivery";
             order.RegisterDate = DateTime.Now;
-            order.OrderStatusCode = 1;
+            order.OrderStatusCode = (int)Constants.OrderStatus.ConfirmandPendingfordeliver;
             order.FirstName = name.Value;
             order.LastName = "";
             order.CustomerId = customer.CustomerId;
@@ -171,9 +171,9 @@ namespace Zuni.FrontEnd
             order.Email = email.Value;
             order.OrderDate = DateTime.Now;
             order.OrderGuid = new Guid();
-            order.OrderStatus = "Not Confirm";
+            order.OrderStatus = "Only Save Order";
             order.RegisterDate = DateTime.Now;
-            order.OrderStatusCode = 3;
+            order.OrderStatusCode = (int)Constants.OrderStatus.SaveOnlyOrder;
             order.FirstName = name.Value;
             order.LastName = "";
             order.CustomerId = customer.CustomerId;

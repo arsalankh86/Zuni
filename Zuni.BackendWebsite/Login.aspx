@@ -45,10 +45,10 @@
 				<h1>Welcome to Zuni admin panel</h1>
 
 				<label for="email">Email</label>
-				<input type="email" id="email" placeholder="example@domain.com" runat="server">
+				<input type="email" id="email" placeholder="example@domain.com" runat="server" required="required">
 
 				<label for="password">Password</label>
-				<input type="password" id="password" placeholder="Password" runat="server">
+				<input type="password" id="password" placeholder="Password" runat="server" required="required">
 
 				<%--<div class="forget-pass"><a href="http://marketing.vitalsoft.co.uk/AdminHTML/forget.html">Forget your password?</a></div>--%>
 

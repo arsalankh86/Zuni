@@ -52,7 +52,7 @@
 			<li><a href="ProductDetail.aspx" title="Customer Detail"><i class="fa fa-tachometer"></i> <span>Product Detail</span></a></li>
             <li><a href="Categories.aspx" title="Categories"><i class="fa fa-tachometer"></i> <span>Categories</span></a></li>
             <li><a href="CustomerDetail.aspx" title="Product Detail"><i class="fa fa-tachometer"></i> <span>Customer Detail</span></a></li>
-            <li><a href="OrderDeatil.aspx"  title="Order Detail"><i class="fa fa-tachometer"></i> <span>Order Detail</span></a></li>
+            <li><a href="OrderDetail.aspx"  title="Order Detail"><i class="fa fa-tachometer"></i> <span>Order Detail</span></a></li>
 			<li><a href="AgentDetail.aspx" title="Agent Detail"><i class="fa fa-tachometer"></i> <span>Agent Detail</span></a></li>
             <li><a href="Report.aspx" title="Reports"><i class="fa fa-tachometer"></i> <span>Reports</span></a></li>
 		</ul>

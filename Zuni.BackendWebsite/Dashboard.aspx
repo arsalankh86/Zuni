@@ -27,19 +27,19 @@
 								<div class="col-sm-6 col-md-3">
 									<div class="data-box box-color-01">
 										<h3>
-                                            <asp:Label ID="lblCompletedOrderCount" runat="server" Text="Label"></asp:Label>
+                                            <asp:Label ID="lblConfirmOrderCount" runat="server" Text="Label"></asp:Label>
 										</h3>
-										<p>Orders</p>
-										<a href="#">More Info <i class="fa fa-arrow-circle-right"></i></a>
+										<p>Confirm Orders</p>
+										<a href="OrderDetail.aspx">More Info <i class="fa fa-arrow-circle-right"></i></a>
 										<br>
 									</div>
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="data-box box-color-02">
-										<h3> <asp:Label ID="lblPendingOrderCount" runat="server" Text="Label"></asp:Label></h3>
-										<p>Pending Order</p>
+										<h3> <asp:Label ID="lblSaveOrderCount" runat="server" Text="Label"></asp:Label></h3>
+										<p>Save Only Order</p>
 										<br>
-										<a href="#">More Info <i class="fa fa-arrow-circle-right"></i></a>
+										<a href="OrderDetail.aspx">More Info <i class="fa fa-arrow-circle-right"></i></a>
 									</div>
 								</div>
 								<div class="col-sm-6 col-md-3">
@@ -47,7 +47,7 @@
 										<h3> <asp:Label ID="lblRegisteredCustomerCount" runat="server" Text="Label"></asp:Label></h3>
 										<p>Registered customers</p>
 										<br>
-										<a href="#">More Info <i class="fa fa-arrow-circle-right"></i></a>
+										<a href="CustomerDetail.aspx">More Info <i class="fa fa-arrow-circle-right"></i></a>
 									</div>
 								</div>
 								<div class="col-sm-6 col-md-3">
@@ -55,7 +55,7 @@
 										<h3> <asp:Label ID="lblAgentCount" runat="server" Text="Label"></asp:Label></h3>
 										<p>Agent</p>
 										<br>
-										<a href="#">More Info <i class="fa fa-arrow-circle-right"></i></a>
+										<a href="AgentDetail.aspx">More Info <i class="fa fa-arrow-circle-right"></i></a>
 									</div>
 								</div>
 							</div>										
@@ -105,11 +105,11 @@
 							</table>
 							</div>					
 						</div>
-						<div class="foot">
+						<%--<div class="foot">
 								<button type="button" class="btn btn-primary btn-sm">Primary</button>
 								<button type="button" class="btn btn-success btn-sm">Success</button>
 								<button type="button" class="btn btn-info btn-sm">Info</button>
-						</div>
+						</div>--%>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -145,11 +145,11 @@
 							</table>
 							</div>					
 						</div>
-						<div class="foot">
+						<%--<div class="foot">
 								<button type="button" class="btn btn-primary btn-sm">Primary</button>
 								<button type="button" class="btn btn-success btn-sm">Success</button>
 								<button type="button" class="btn btn-info btn-sm">Info</button>
-						</div>
+						</div>--%>
 					</div>
 				</div>
 			</div>
@@ -172,16 +172,18 @@
                                     <th>Customer</th>
 									<th>Amount </th>
                                     <th>Status</th>
+                                    <th>Agent</th>
 								</tr>
 								</thead>
 								 <asp:Repeater ID="rptOrder" runat="server">
                                      <ItemTemplate>
 								<tbody>
 								<tr>
-									<td><%# Eval("OrderNumber") %>' </td>
-									<td><%# Eval("CustomerFirstName") %>' <%# Eval("CustomerLastName") %>'</td>
-									<td><%# Eval("OrderStatus") %>'</td>
-                                    <td><%# Eval("OrderTotalAmount") %>'</td>
+									<td><%# Eval("OrderNumber") %> </td>
+									<td><%# Eval("CustomerFirstName") %> <%# Eval("CustomerLastName") %></td>
+									<td><%# Eval("OrderStatus") %></td>
+                                    <td><%# Eval("OrderTotalAmount") %></td>
+                                     <td><%# Eval("AgentID") %> <br /><%# Eval("AgentName") %></td>
 								</tr>
 								</tbody>
                                          </ItemTemplate>
@@ -190,11 +192,11 @@
 							</table>
 							</div>					
 						</div>
-						<div class="foot">
+						<%--<div class="foot">
 								<button type="button" class="btn btn-primary btn-sm">Primary</button>
 								<button type="button" class="btn btn-success btn-sm">Success</button>
 								<button type="button" class="btn btn-info btn-sm">Info</button>
-						</div>
+						</div>--%>
 					</div>
 				</div>				
 			</div>

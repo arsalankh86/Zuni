@@ -44,6 +44,7 @@
     <Compile Include="AdminRepository.cs" />
     <Compile Include="AgentRepository.cs" />
     <Compile Include="CategoryRepository.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="CustomerRepository.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Customer.cs" />

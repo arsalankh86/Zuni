@@ -26,7 +26,18 @@
     <!-- Zuni JS -->
 	<script src="js/zuni-script.js"></script>
 	
-	
+	<style>
+     .buttonlogin{
+         background-color: #ec008c;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 23px;
+    box-shadow: #b5b5b5 1px 2px 4px;
+    color: #fff
+     }
+	</style>
 	
 </head>
 <body  class="app-bg">
@@ -39,15 +50,15 @@
 
 		<div class="login-form">
 			<div class="input-field has-icon">
-				<input type="email" id="email" placeholder="User id" runat="server">
+				<input type="email" id="email" placeholder="User id" runat="server" required="required">
 				<i class="fa fa-user"></i>
 			</div>
 			<div class="input-field has-icon">
-				<input type="password" id="password" placeholder="Password" runat="server">
+				<input type="password" id="password" placeholder="Password" runat="server" required="required">
 				<i class="fa fa-unlock-alt"></i>
 			</div>
 			<div class="input-field">
-                 <asp:Button ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click" />
+                 <asp:Button ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click" CssClass="buttonlogin" />
 			</div>
 		</div>
 

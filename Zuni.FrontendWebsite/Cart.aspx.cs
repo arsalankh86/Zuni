@@ -114,9 +114,9 @@ public partial class Cart : System.Web.UI.Page
         order.Email = email.Value;
         order.OrderDate = DateTime.Now;
         order.OrderGuid = new Guid();
-        order.OrderStatus = "Confirm & Pending";
+        order.OrderStatus = "Save & Confirm"; ;
         order.RegisterDate = DateTime.Now;
-        order.OrderStatusCode = 1;
+        order.OrderStatusCode = (int)Constants.OrderStatus.ConfirmandPendingfordeliver;
         order.FirstName = name.Value;
         order.LastName = "";
         order.CustomerId = customer.CustomerId;
@@ -148,6 +148,7 @@ public partial class Cart : System.Web.UI.Page
             orderRep.InsertOrdersDetail(OrderNumber, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[5].ToString(), agentId, customer.CustomerId);
 
         }
+        Session["Cart"] = null;
         Response.Redirect("Thankyou.aspx");
     }
 
@@ -174,9 +175,9 @@ public partial class Cart : System.Web.UI.Page
         order.Email = email.Value;
         order.OrderDate = DateTime.Now;
         order.OrderGuid = new Guid();
-        order.OrderStatus = "Not Confirm";
+        order.OrderStatus = "Save Order";
         order.RegisterDate = DateTime.Now;
-        order.OrderStatusCode = 3;
+        order.OrderStatusCode = (int)Constants.OrderStatus.SaveOnlyOrder;
         order.FirstName = name.Value;
         order.LastName = "";
         order.CustomerId = customer.CustomerId;
@@ -202,6 +203,7 @@ public partial class Cart : System.Web.UI.Page
             orderRep.InsertOrdersDetail(OrderNumber, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[5].ToString(), agentId, customer.CustomerId);
 
         }
+        Session["Cart"] = null;
         Response.Redirect("Thankyou.aspx");
     }
 }

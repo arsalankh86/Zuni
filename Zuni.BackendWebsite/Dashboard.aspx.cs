@@ -13,7 +13,7 @@ public partial class Dashboard : System.Web.UI.Page
     CustomerRepository customerRepository = new CustomerRepository();
     AgentRepository agentRepository = new AgentRepository();
     OrderRepository orderRepository = new OrderRepository();
-    int custoemrCount = 0, agentCount = 0, orderCompletedCount = 0, orderPendingCount = 0;
+    int custoemrCount = 0, agentCount = 0, orderConfirmCount = 0, orderSaveOnlyCount = 0;
     protected void Page_Load(object sender, EventArgs e)
     {
         DataSet dsCustomer = customerRepository.GetAllCustomer();
@@ -24,18 +24,20 @@ public partial class Dashboard : System.Web.UI.Page
         if (dsAgent != null)
             agentCount = dsAgent.Tables[0].Rows.Count;
 
-        DataSet dsCompletedOrder = orderRepository.GetAllCompletedOrders();
-        if (dsCompletedOrder != null)
-            orderCompletedCount = dsCompletedOrder.Tables[0].Rows.Count;
+        DataSet dsOrder = orderRepository.GetAllOrders();
 
-        DataSet dsPendingOrder = orderRepository.GetAllPendingOrders();
-        if (dsPendingOrder != null)
-            orderPendingCount = dsPendingOrder.Tables[0].Rows.Count;
+        DataSet dsConfirmdOrder = orderRepository.GetAllConfirmOrders();
+        if (dsConfirmdOrder != null)
+            orderConfirmCount = dsConfirmdOrder.Tables[0].Rows.Count;
+
+        DataSet dsSaveOnlyOrder = orderRepository.GetAllSaveOnlyOrders();
+        if (dsSaveOnlyOrder != null)
+            orderSaveOnlyCount = dsSaveOnlyOrder.Tables[0].Rows.Count;
 
 
         lblAgentCount.Text = agentCount.ToString();
-        lblCompletedOrderCount.Text = orderCompletedCount.ToString();
-        lblPendingOrderCount.Text = orderPendingCount.ToString();
+        lblConfirmOrderCount.Text = orderConfirmCount.ToString();
+        lblSaveOrderCount.Text = orderSaveOnlyCount.ToString();
         lblRegisteredCustomerCount.Text = custoemrCount.ToString();
 
 
@@ -45,6 +47,9 @@ public partial class Dashboard : System.Web.UI.Page
 
         rptAgent.DataSource = dsAgent;
         rptAgent.DataBind();
+
+        rptOrder.DataSource = dsOrder;
+        rptOrder.DataBind();
 
 
     }

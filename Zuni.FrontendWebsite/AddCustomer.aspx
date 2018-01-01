@@ -40,16 +40,16 @@
 					<div class="card-body">
 						<div class="card-form">
 							<div class="input-field has-icon">
-								<input type="text" id="name" name="name" placeholder="User id" runat="server">
+								<input type="text" id="name" name="name" placeholder="User id" runat="server" required="required">
 
 								<i class="fa fa-user"></i>
 							</div>
 							<div class="input-field has-icon">
-								<input type="email" id="email" name="email" placeholder="Email" runat="server" onformchange="validateEmail()">
+								<input type="email" id="email" name="email" placeholder="Email" runat="server" onformchange="validateEmail()" required="required">
 								<i class="fa fa-envelope"></i>
 							</div>
 							<div class="input-field has-icon">
-								<input type="text" id="phone" name="phone" placeholder="Phone" runat="server">
+								<input type="text" id="phone" name="phone" placeholder="Phone" runat="server" required="required">
 								<i class="fa fa-phone"></i>
 							</div>
 						</div>
