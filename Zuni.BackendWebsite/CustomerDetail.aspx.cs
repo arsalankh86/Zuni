@@ -9,7 +9,7 @@ using Zuni.Service;
 
 public partial class CustomerDetail : System.Web.UI.Page
 {
-    CustomerRepository customerRepository = new CustomerRepository();
+    CustomerRepository customerRepository = new CustomerRepository(); 
     protected void Page_Load(object sender, EventArgs e)
     {
         if (IsPostBack)
