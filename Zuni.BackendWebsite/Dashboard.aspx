@@ -170,8 +170,8 @@
 								<tr>
 									<th>Order Code</th>
                                     <th>Customer</th>
-									<th>Amount </th>
-                                    <th>Status</th>
+									<th>Status</th>
+                                    <th>Amount</th>
                                     <th>Agent</th>
 								</tr>
 								</thead>
