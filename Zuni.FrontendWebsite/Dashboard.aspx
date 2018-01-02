@@ -3,7 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    	<div class="dash-boxs">
+    
+    	<div style="padding:5px" >
+           <b>LoggedIn By: <asp:Label runat="server" id="lblagentname"></asp:Label></b>
+            </div>
+            <div class="dash-boxs">
 				<div class="dash-item">
 					<a href="Categories.aspx" class="square">
 						<div class="item-contant">
