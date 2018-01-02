@@ -18,4 +18,10 @@ public partial class ZuniFrontend : System.Web.UI.MasterPage
         else
             Response.Redirect("Login.aspx");
     }
+    protected void lnklogout_Click(object sender, EventArgs e)
+    {
+        Session.Abandon();
+        Response.Redirect("Login.aspx");
+
+    }
 }

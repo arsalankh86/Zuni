@@ -20,6 +20,17 @@ public partial class Login : System.Web.UI.Page
         if (dt.Rows.Count >= 1)
         {
             Session["AgentUser"] = dt.Rows[0];
+
+
+            HttpCookie myCookie = new HttpCookie("agentid");
+            DateTime now = DateTime.Now;
+
+            // Set the cookie value.
+            myCookie.Value = dt.Rows[0][0].ToString();
+
+            // Don't forget to reset the Expires property!
+            myCookie.Expires = now.AddYears(50);
+            Response.SetCookie(myCookie);
             Response.Redirect("Dashboard.aspx");
         }
     }
