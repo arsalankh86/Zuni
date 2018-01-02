@@ -17,4 +17,26 @@ public partial class AgentDetail : System.Web.UI.Page
         rptAgent.DataBind();
 
     }
+
+
+    protected void btnCreateAgent_Click(object sender, EventArgs e)
+    {
+        if (name.Value != "" && password.Value != "" && email.Value != "")
+        {
+            AgentRepository agentRepository = new AgentRepository();
+            int agentId = 0;
+            if (Session["AgentUser"] != null)
+            {
+                DataRow dr = (DataRow)Session["AgentUser"];
+                agentId = Convert.ToInt32(dr[0].ToString());
+            }
+
+            agentRepository.AddAgent(name.Value, email.Value, password.Value);
+            Response.Redirect("Dashboard.aspx");
+        }
+        else
+        {
+            lblerror.Text = "Please Fill Form Correctly";
+        }
+    }
 }

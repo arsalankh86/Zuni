@@ -88,10 +88,11 @@
                  <Columns>
                 <asp:BoundField DataField="Name" HeaderText="Name" />
                 <asp:BoundField DataField="Description" HeaderText="Description" />
-                <asp:BoundField HeaderText="Image Path" DataField="ImageFilenameOverride" />
+                <asp:HyperLinkField NavigateUrl="ImageFilenameOverride"   HeaderText="Image Path" DataTextField="ImageFilenameOverride" />
                        <asp:BoundField HeaderText="Cost in Rupee" DataField="Costinrupee" />
                        <asp:BoundField HeaderText="Profit Price in Rupee" DataField="Profitpriceinrupee" />
                       <asp:BoundField HeaderText="Category Name" DataField="CatName" />
+                     <asp:ImageField DataImageUrlField="ImageFilenameOverride" ControlStyle-Width="100px" ControlStyle-Height="100px"></asp:ImageField>
                  </Columns>
          <FooterStyle BackColor="#CCCC99" />
         <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
