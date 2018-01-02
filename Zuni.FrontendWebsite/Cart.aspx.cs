@@ -48,12 +48,14 @@ public partial class Cart : System.Web.UI.Page
 
 
 
-                    dtcart = dtSessionCart;
-
-                    rptCart.DataSource = dtcart;
-                    rptCart.DataBind();
+                    
                     //lblsubtotal.Text = value.ToString();
                 }
+
+                dtcart = dtSessionCart;
+
+                rptCart.DataSource = dtcart;
+                rptCart.DataBind();
 
             }
         }
@@ -181,7 +183,7 @@ public partial class Cart : System.Web.UI.Page
         order.FirstName = name.Value;
         order.LastName = "";
         order.CustomerId = customer.CustomerId;
-
+        order.AgentId = agentId;
         OrderRepository orderRepository = new OrderRepository();
         int OrderNumber = orderRepository.InsertOrders(order);
 
