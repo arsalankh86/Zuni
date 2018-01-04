@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Web;
@@ -19,6 +20,19 @@ public partial class Cart : System.Web.UI.Page
         if (IsPostBack)
             return;
         BindCart();
+        BindCustomer();
+    }
+
+    private void BindCustomer()
+    {
+        ddlCustomer.Items.Insert(0, new ListItem("Select", "0"));
+        DataSet ds = customerRep.GetAllCustomer();
+        
+        ddlCustomer.DataSource = ds;
+        ddlCustomer.DataTextField = "Email";
+        ddlCustomer.DataValueField = "CustomerId";
+        ddlCustomer.DataBind();
+
     }
 
     private void BindCart()
@@ -95,6 +109,17 @@ public partial class Cart : System.Web.UI.Page
 
     protected void btnConfirmOrder_Click(object sender, EventArgs e)
     {
+        placeOrder("Save & Confirm", (int)Constants.OrderStatus.ConfirmandPendingfordeliver);
+    }
+
+    protected void btnOrder_Click(object sender, EventArgs e)
+    {
+        placeOrder("Save Order", (int)Constants.OrderStatus.SaveOnlyOrder);
+    }
+
+    private void placeOrder(string status, int statuscode)
+    {
+
         int agentId = 0;
         if (Session["AgentUser"] != null)
         {
@@ -116,9 +141,9 @@ public partial class Cart : System.Web.UI.Page
         order.Email = email.Value;
         order.OrderDate = DateTime.Now;
         order.OrderGuid = new Guid();
-        order.OrderStatus = "Save & Confirm"; ;
+        order.OrderStatus = status;
         order.RegisterDate = DateTime.Now;
-        order.OrderStatusCode = (int)Constants.OrderStatus.ConfirmandPendingfordeliver;
+        order.OrderStatusCode = statuscode;
         order.FirstName = name.Value;
         order.LastName = "";
         order.CustomerId = customer.CustomerId;
@@ -131,8 +156,8 @@ public partial class Cart : System.Web.UI.Page
             amount += Convert.ToDecimal(dr[1].ToString());
         }
 
-          order.OrderTotal = amount;
-            int OrderNumber = orderRep.InsertOrders(order);
+        order.OrderTotal = amount;
+        int OrderNumber = orderRep.InsertOrders(order);
 
         for (int i = dtSessionCart.Rows.Count - 1; i >= 0; i--)
         {
@@ -150,62 +175,38 @@ public partial class Cart : System.Web.UI.Page
             orderRep.InsertOrdersDetail(OrderNumber, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[5].ToString(), agentId, customer.CustomerId);
 
         }
+
+        CommunicationRepository comRep = new CommunicationRepository();
+        string fromEmail = ConfigurationManager.AppSettings["fromemail"].ToString();
+        string username = ConfigurationManager.AppSettings["username"].ToString();
+        string password = ConfigurationManager.AppSettings["password"].ToString();
+        string toemail = customer.Email;
+        string subject = "Confirm Order Email";
+        string message = "Your Zuni order has confirmed";
+
+        comRep.SendEmail(fromEmail,toemail, subject, 0, message, username, password);
+        comRep.SendMessage();
+
         Session["Cart"] = null;
         Response.Redirect("Thankyou.aspx");
+
+        
+
     }
 
-    protected void btnOrder_Click(object sender, EventArgs e)
+
+    protected void ddlCustomer_SelectedIndexChanged(object sender, EventArgs e)
     {
-        int agentId = 0;
-        if (Session["AgentUser"] != null)
-        {
-            DataRow dr = (DataRow)Session["AgentUser"];
-            agentId = Convert.ToInt32(dr[0].ToString());
-        }
+       
 
-        Customer customer = new Customer();
-        customer.FirstName = name.Value;
-        customer.LastName = "";
-        customer.Email = email.Value;
-        customer.Phone = phone.Value;
-        customer.AgentId = agentId;
+    }
 
-        customer = customerRep.PreInsertCustomer(customer);
+    protected void ddlCustomer_SelectedIndexChanged1(object sender, EventArgs e)
+    {
+        Customer customer = customerRep.GetCustomerByCustomerId(Convert.ToInt32(ddlCustomer.SelectedValue.ToString()));
+        email.Value = customer.Email;
+        name.Value = customer.FirstName + customer.LastName;
+        phone.Value = customer.Phone;
 
-        Orders order = new Orders();
-        order.Phone = phone.Value;
-        order.Email = email.Value;
-        order.OrderDate = DateTime.Now;
-        order.OrderGuid = new Guid();
-        order.OrderStatus = "Save Order";
-        order.RegisterDate = DateTime.Now;
-        order.OrderStatusCode = (int)Constants.OrderStatus.SaveOnlyOrder;
-        order.FirstName = name.Value;
-        order.LastName = "";
-        order.CustomerId = customer.CustomerId;
-        order.AgentId = agentId;
-        OrderRepository orderRepository = new OrderRepository();
-        int OrderNumber = orderRepository.InsertOrders(order);
-
-        DataTable dtSessionCart = (DataTable)Session["Cart"];
-        for (int i = dtSessionCart.Rows.Count - 1; i >= 0; i--)
-        {
-
-            DataRow dr = dtSessionCart.Rows[i];
-
-            OrderDetail orderDetail = new OrderDetail();
-            //orderDetail.CustomerId = customer.CustomerId;
-            //orderDetail.OrderNumber = OrderNumber;
-            //orderDetail.ProductId = Convert.ToInt32(dr[0].ToString());
-            //orderDetail.OrderedProductPrice = Convert.ToDecimal(dr[1].ToString());
-            //orderDetail.Quantity = Convert.ToInt32(dr[2].ToString());
-            //orderDetail.OrderedProductName = dr[5].ToString();
-            //orderDetail.AgentId = agentId;
-            //orderRep.InsertOrdersDetail(orderDetail);
-            orderRep.InsertOrdersDetail(OrderNumber, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[5].ToString(), agentId, customer.CustomerId);
-
-        }
-        Session["Cart"] = null;
-        Response.Redirect("Thankyou.aspx");
     }
 }
